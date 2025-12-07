@@ -70,7 +70,6 @@ That's it! The application is ready to use.
 - [Security Features](#-security-features)
 - [Development](#-development)
 - [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
 - [License](#-license)
 
 ## ✨ Features
@@ -679,16 +678,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ```
 
-## 🤝 Contributing
 
-Contributions are welcome! Please follow these guidelines:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Follow PSR-4 and PSR-1 standards
-4. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-5. Push to the branch (`git push origin feature/AmazingFeature`)
-6. Open a Pull Request
 
 ### Coding Standards
 
