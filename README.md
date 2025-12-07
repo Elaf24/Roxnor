@@ -6,6 +6,55 @@
 
 A simple, production-ready web application built with **pure PHP** (no frameworks) following **MVC architecture**, **OOP principles**, **PSR-4 autoloading**, and **PSR-1 naming conventions**. The application includes user authentication, validated form submission system, and comprehensive reporting features, all containerized with Docker.
 
+## 🚀 Quick Start (Docker)
+
+### Docker Hub Image
+
+**Image URL**: https://hub.docker.com/r/elaf24/roxnor
+
+**Pull Command**:
+
+```bash
+docker pull elaf24/roxnor:latest
+```
+
+### Run with Docker Compose
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <repository-url>
+   cd roxnor
+   ```
+
+2. **Start containers** (uses Docker Hub image automatically)
+
+   ```bash
+   docker-compose up -d
+   ```
+
+3. **Access the application**
+
+   - Open browser: `http://localhost:8080`
+   - Database is automatically initialized
+
+4. **Create your first account**
+   - Go to: `http://localhost:8080/login.php`
+   - Click "Sign Up" tab and register
+
+That's it! The application is ready to use.
+
+## ⚡ Key Highlights
+
+- ✅ **Pure PHP** - No frameworks, clean MVC architecture
+- ✅ **Docker Ready** - Pre-built image on Docker Hub: `elaf24/roxnor:latest`
+- ✅ **Complete Authentication** - Signup, Login, Logout with session management
+- ✅ **Form Submission** - Validated form with frontend (JS) and backend (PHP) validation
+- ✅ **Reporting System** - View and filter submissions by date range and user ID
+- ✅ **PSR Standards** - PSR-4 autoloading and PSR-1 naming conventions
+- ✅ **Security** - Password hashing, SQL injection prevention, XSS protection
+- ✅ **24-Hour Rate Limiting** - Cookie-based submission prevention
+
 ## 📋 Table of Contents
 
 - [Features](#-features)
@@ -126,34 +175,29 @@ A simple, production-ready web application built with **pure PHP** (no framework
 - json
 - mbstring
 
-## 🚀 Installation
+## 📦 Installation (Detailed)
 
 ### Option 1: Docker (Recommended)
 
-1. **Clone the repository**
+The Docker Hub image is pre-built and ready to use. The `docker-compose.yml` file automatically pulls the image from Docker Hub.
 
-   ```bash
-   git clone <repository-url>
-   cd roxnor
-   ```
-
-2. **Start Docker containers**
+1. **Start Docker containers**
 
    ```bash
    docker-compose up -d
    ```
 
-3. **Verify containers are running**
+2. **Verify containers are running**
 
    ```bash
    docker-compose ps
    ```
 
-4. **Access the application**
+3. **Access the application**
    - Open your browser: `http://localhost:8080`
    - Database is automatically initialized
 
-### Option 2: Local Installation
+### Option 2: Local Installation (Without Docker)
 
 1. **Install dependencies**
 
@@ -464,19 +508,18 @@ docker-compose exec web bash
 docker-compose exec db mysql -uroot -proot roxnor_db
 ```
 
-### Docker Hub Image
+### Building the Docker Image (Optional)
 
-You can build and push the image to Docker Hub:
+If you want to build the image yourself instead of using the pre-built one:
 
 ```bash
 # Build image
-docker build -t yourusername/roxnor:latest .
+docker build -t elaf24/roxnor:latest .
 
-# Push to Docker Hub
-docker push yourusername/roxnor:latest
+# Push to Docker Hub (requires login)
+docker login
+docker push elaf24/roxnor:latest
 ```
-
-**Docker Hub URL**: `https://hub.docker.com/r/yourusername/roxnor`
 
 ## 🔌 API Endpoints
 
