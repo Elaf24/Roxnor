@@ -1,0 +1,14 @@
+{
+    "name": "roxnor/form-submission-system",
+    "description": "PHP Form Submission System with Authentication",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
+

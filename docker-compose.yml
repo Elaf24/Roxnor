@@ -1,0 +1,41 @@
+services:
+  web:
+    image: elaf24/roxnor:latest
+    container_name: roxnor_web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=roxnor_db
+      - DB_USER=root
+      - DB_PASS=root
+      - BASE_URL=http://localhost:8080
+      - HASH_SALT=roxnor_salt_key_2024
+    networks:
+      - roxnor_network
+
+  db:
+    image: mysql:8.0
+    container_name: roxnor_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=roxnor_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    networks:
+      - roxnor_network
+
+networks:
+  roxnor_network:
+    driver: bridge
+
+volumes:
+  db_data:
+
