@@ -23,7 +23,7 @@ docker pull elaf24/roxnor:latest
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Elaf24/Roxnor.git
    cd roxnor
    ```
 
