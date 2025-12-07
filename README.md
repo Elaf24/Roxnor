@@ -702,20 +702,4 @@ Contributions are welcome! Please follow these guidelines:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Authors
 
-- **Your Name** - _Initial work_ - [YourGitHub](https://github.com/yourusername)
-
-## 🙏 Acknowledgments
-
-- PHP Community
-- Docker Team
-- Composer Team
-
-## 📞 Support
-
-For support, email your-email@example.com or open an issue in the repository.
-
----
-
-**Made with ❤️ using Pure PHP, MVC Architecture, and Docker**
