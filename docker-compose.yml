@@ -36,6 +36,9 @@ networks:
   roxnor_network:
     driver: bridge
 
+# volumes:
+#   db_data:
+
 volumes:
-  db_data:
+  - ./public:/var/www/html/public
 
