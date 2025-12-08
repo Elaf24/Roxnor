@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - .:/var/www/html
+      - ./public:/var/www/html/public
     depends_on:
       - db
     environment:
@@ -36,9 +36,9 @@ networks:
   roxnor_network:
     driver: bridge
 
-# volumes:
-#   db_data:
-
 volumes:
-  - ./public:/var/www/html/public
+  db_data:
+
+
+  
 
