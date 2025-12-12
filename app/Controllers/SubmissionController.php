@@ -39,7 +39,7 @@ class SubmissionController extends Controller
         if (!empty($errors)) {
             $this->jsonResponse(['success' => false, 'errors' => $errors], 400);
         }
-
+   #hasing is happeing for receipt id
         $config = require __DIR__ . '/../../config/app.php';
         $hashKey = hash('sha512', $data['receipt_id'] . $config['hash_salt']);
 
